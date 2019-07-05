@@ -1,0 +1,15 @@
+#请使用UTF-8格式保存
+plugin.enabled=UnknownCauseTracker插件已加载！
+plugin.disabled=UnknownCauseTracker插件已卸载！
+plugin.read.failed=在读取语言文件时出现异常！
+plugin.track.chat=检测到自动发送的聊天信息，正在打印StackTrace
+plugin.track.commandblock=世界为%s，位置为x=%d,y=%d,z=%d的命令方块被触发了
+plugin.track.command=检测到玩家自动执行的命令，正在打印堆栈轨迹（命令执行者：%s）：
+command.stackdump=正在获取堆栈轨迹...
+command.stackdump.failed=获取失败
+command.reload.doing=正在重载...
+command.reload.failed=重载失败！请查看控制台！
+command.reload.succeed=重载成功！
+command.help.1=命令帮助：
+command.help.2=/usc dumpstack ——打印堆栈轨迹
+command.help.3=/usc reload ——重载插件

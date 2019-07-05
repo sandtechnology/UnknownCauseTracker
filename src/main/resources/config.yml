@@ -1,0 +1,40 @@
+#请使用UTF-8格式保存
+
+#版本号
+Version: 1
+
+#########
+#  聊天 #
+#########
+
+#追踪聊天原因
+#在检测到玩家发送设置的聊天内容时自动打印堆栈
+TrackChat: true
+
+#需要追踪的聊天内容
+Chat:
+  - '666'
+  - '瓜皮'
+
+#########
+#  命令 #
+#########
+
+#追踪执行的命令方块
+#在命令方块执行时自动在后台发送坐标
+TrackCommandBlock: true
+
+#不需要追踪命令方块的世界
+WorldWhiteList:
+  - 'example'
+
+#追踪执行指定命令的玩家
+#在检测到玩家执行指定命令时自动打印堆栈
+TrackPlayerCommand: true
+
+#需要追踪的命令
+Command:
+  - 'msg'
+
+#在使用/uct dumpstack时显示的栈帧数量
+StackCount: 10

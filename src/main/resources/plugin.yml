@@ -1,0 +1,15 @@
+name: UnknownCauseTracker
+version: ${project.version}
+main: sandtechology.uct.UCT
+prefix: UCT
+authors: [sandtechnology]
+description: Helpful plugin to track phenomenon which due to a unknown cause.
+commands:
+  ust:
+    description: UnknownCauseTracker plugin main command
+permissions:
+  ust:
+    default: op
+    children:
+      - uct.reload
+      - uct.dumpstack
