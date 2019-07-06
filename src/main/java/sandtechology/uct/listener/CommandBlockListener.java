@@ -13,8 +13,6 @@ import static sandtechology.uct.language.LanguageManager.getI18n;
 public class CommandBlockListener implements Listener {
     @EventHandler
     public void onCommandBlockAct(ServerCommandEvent event) {
-
-        log().info(event.getSender().getName());
         if (event.getSender() instanceof BlockCommandSender) {
             Location location = ((BlockCommandSender) event.getSender()).getBlock().getLocation();
             if (!config().getStringList("WorldWhiteList").contains(location.getWorld().getName())) {
