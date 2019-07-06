@@ -12,7 +12,7 @@ public class ChatListener implements Listener {
     @EventHandler
     public void onChat(AsyncPlayerChatEvent event) {
         if (config().getStringList("Chat").contains(event.getMessage())) {
-            log().info(getI18n("plugin.track.chat"));
+            log().info(String.format(getI18n("plugin.track.chat"), event.getRecipients().stream().map(String::valueOf)));
             Thread.dumpStack();
         }
     }

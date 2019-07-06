@@ -2,8 +2,8 @@
 plugin.enabled=UnknownCauseTracker插件已加载！
 plugin.disabled=UnknownCauseTracker插件已卸载！
 plugin.read.failed=在读取语言文件时出现异常！
-plugin.track.chat=检测到自动发送的聊天信息，正在打印StackTrace
-plugin.track.commandblock=世界为%s，位置为x=%d,y=%d,z=%d的命令方块被触发了
+plugin.track.chat=检测到自动发送的聊天信息，正在打印堆栈轨迹（发送者：%s）
+plugin.track.commandblock=世界为%s，位置为x=%d,y=%d,z=%d的命令方块被触发了（命令为%s）
 plugin.track.command=检测到玩家自动执行的命令，正在打印堆栈轨迹（命令执行者：%s）：
 command.stackdump=正在获取堆栈轨迹...
 command.stackdump.failed=获取失败

@@ -22,9 +22,7 @@ public class MessageUntil {
         sendMessage(sender, ChatColor.GREEN, getI18n("command.stackdump"));
         Thread server = Thread.currentThread();
         //感谢754503921和a39的建议
-        sender.getServer().getScheduler().runTaskAsynchronously(getPlugin(), () -> {
-            Arrays.stream(server.getStackTrace()).map(String::valueOf).forEach(sender::sendMessage);
-        });
+        sender.getServer().getScheduler().runTaskAsynchronously(getPlugin(), () -> Arrays.stream(server.getStackTrace()).map(String::valueOf).forEach(sender::sendMessage));
 
     }
 

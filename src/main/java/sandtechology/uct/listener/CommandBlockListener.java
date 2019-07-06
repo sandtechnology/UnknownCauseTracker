@@ -1,6 +1,6 @@
 package sandtechology.uct.listener;
 
-import org.bukkit.Location;
+import org.bukkit.block.Block;
 import org.bukkit.command.BlockCommandSender;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -14,14 +14,15 @@ public class CommandBlockListener implements Listener {
     @EventHandler
     public void onCommandBlockAct(ServerCommandEvent event) {
         if (event.getSender() instanceof BlockCommandSender) {
-            Location location = ((BlockCommandSender) event.getSender()).getBlock().getLocation();
-            if (!config().getStringList("WorldWhiteList").contains(location.getWorld().getName())) {
+            Block commandBlock = ((BlockCommandSender) event.getSender()).getBlock();
+            if (!config().getStringList("WorldWhiteList").contains(commandBlock.getWorld().getName())) {
                 log().info(String.format(
                         getI18n("plugin.track.commandblock"),
-                        location.getWorld().getName(),
-                        location.getBlockX(),
-                        location.getBlockY(),
-                        location.getBlockZ()));
+                        commandBlock.getWorld().getName(),
+                        commandBlock.getX(),
+                        commandBlock.getY(),
+                        commandBlock.getZ(),
+                        event.getCommand()));
             }
         }
     }
