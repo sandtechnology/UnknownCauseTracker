@@ -5,10 +5,10 @@ prefix: UCT
 authors: [sandtechnology]
 description: Helpful plugin to track phenomenon which due to a unknown cause.
 commands:
-  ust:
+  uct:
     description: UnknownCauseTracker plugin main command
 permissions:
-  ust:
+  uct:
     default: op
     children:
       - uct.reload

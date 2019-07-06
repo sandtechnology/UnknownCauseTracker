@@ -16,7 +16,7 @@ import java.util.logging.Logger;
 import static sandtechology.uct.language.LanguageManager.*;
 import static sandtechology.uct.until.MessageUntil.sendMessage;
 
-public final class UCT extends JavaPlugin {
+public class UCT extends JavaPlugin {
 
 
     private static UCT plugin;

@@ -3,6 +3,7 @@ package sandtechology.uct.listener;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerCommandPreprocessEvent;
+import org.bukkit.event.server.ServerCommandEvent;
 
 import static sandtechology.uct.UCT.config;
 import static sandtechology.uct.UCT.log;
@@ -12,8 +13,9 @@ public class CommandListener implements Listener {
 
     @EventHandler
     public void onCommandSent(PlayerCommandPreprocessEvent event) {
-        if (config().getBoolean("TrackPlayerCommand")) {
+        if (config().getStringList("Command").contains(event.getMessage())) {
             log().info(String.format(getI18n("plugin.track.command"), event.getPlayer().getName()));
+            event.getPlayer().getServer().getPluginManager().callEvent(new ServerCommandEvent(event.getPlayer(), "233"));
             Thread.dumpStack();
         }
     }
